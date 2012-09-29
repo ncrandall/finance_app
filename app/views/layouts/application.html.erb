@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FinanceApp</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
-
-<%= yield %>
-
+<div class="navbar">
+  <div class="navbar-inner">
+    <a href="#" id="logo">Finance App</a>
+      <nav>
+        <ul class="nav">
+          <li><%= link_to "About", "#" %></li>
+          <li><%= link_to "Tools", "#" %></li>
+          <li><%= link_to "Login", "#" %></li>
+          <li><%= link_to "Contact", "#" %></li>
+        </ul>
+      </nav>
+  </div>    
+</div>
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>

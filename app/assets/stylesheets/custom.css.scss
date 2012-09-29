@@ -1,0 +1,30 @@
+$navbarHeight: 70px;
+@import "bootstrap";
+
+/* Header */
+
+#logo {
+  float: left;
+  font-size: 2.7em;
+  text-decoration: none;
+  line-height: 2;
+  color: #FFF;
+  margin: 0 25px 0 15px;
+}
+
+
+/* Home */
+
+.center {
+  text-align: center;
+}
+
+.center h1{
+  margin-bottom: 18px;
+}
+
+.center ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
