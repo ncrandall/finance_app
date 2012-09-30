@@ -1,4 +1,6 @@
 FinanceApp::Application.routes.draw do
+  resources :accounts
+
   get "static_pages/home"
 
   # The priority is based upon order of creation:
