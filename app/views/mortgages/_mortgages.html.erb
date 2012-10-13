@@ -1,0 +1,13 @@
+<% if @mortgages.any? %>
+<ul id="item-list">
+  <% @mortgages.each do |mortgage| %>
+    <li><b><%= link_to "$#{mortgage.principal}", mortgage_path(mortgage.id)%></b> - <%= mortgage.term %>
+            <%= pluralize(mortgage.term,"year") %> @<%= mortgage.annual_rate %> 
+        <%= link_to "View", mortgage_url(mortgage.id) %> |
+        <%= link_to "Edit", "#" %> |
+        <%= link_to "Delete",  mortgage_url(mortgage.id), :method => "DELETE"%>
+
+    </li>
+  <% end %>
+</ul>
+<% end %>

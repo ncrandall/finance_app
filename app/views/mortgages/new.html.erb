@@ -1,0 +1,9 @@
+<div class="span8">
+  <h1>Create a New Mortgage Calculation</h1>
+</div>
+<div class="span4">
+  <%= form_for @mortgage do |f| %>
+    <%= render 'form', :f => f %>
+    <%= f.submit "Create Mortgage", :class => "btn btn-primary" %>
+  <% end %>
+</div>

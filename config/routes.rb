@@ -2,7 +2,8 @@ FinanceApp::Application.routes.draw do
   resources :accounts
 
   get "static_pages/home"
-
+  
+  resources :mortgages
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

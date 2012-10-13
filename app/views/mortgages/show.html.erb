@@ -1,0 +1,8 @@
+<h1><%= @mortgage.principal %></h1>
+
+<h2><%= @mortgage.annual_rate %></h2>
+<h2><%= @mortgage.term %></h2>
+
+Your current monthly payment is: $<%= @mortgage.monthly_payment %>
+
+<%= render 'amortization_table' %>

@@ -1,0 +1,28 @@
+<% cnt = 1 %>
+<div>
+  <table class="table">
+    <thead>
+      <td>Month #</td>
+      <td>Payment</td>
+      <td>Equity</td>
+      <td>Interest</td>
+      <td>principal to interest graph</td>
+      <td>Remaining Principal</td>
+    </thead>
+    <% @table.each do |row| %>
+    <tr>
+      <td><%= cnt %></td>
+      <td><%= row[:payment].round(2) %></td>
+      <td><span class="text-success"><%= row[:equity].round(2) %></span></td>
+      <td><span class="text-error"><%= row[:interest].round(2) %></span></td>
+      <td>
+        <div class="progress pregress-info">
+          <div class="bar" style="width: <%= row[:interest] / row[:payment] * 100 %>%">
+        </div>
+      </td>
+      <td><%= row[:principal].round(2) %></td>
+    </tr>
+    <% cnt += 1 %>
+    <% end %>
+  </table>
+</div>
